@@ -1,0 +1,6 @@
+celery
+redis
+
+numpy 
+dask
+distributed
