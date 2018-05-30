@@ -12,7 +12,7 @@ from http://slideplayer.com/slide/7076521/
 
 * Client - where we run our main script
 
-* Proxy - Scheduler process
+* Proxy - Scheduler process `$ dask-scheduler`
 
 * Server - Worker process(es) `$ dask-worker`
 
