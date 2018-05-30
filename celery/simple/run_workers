@@ -1,0 +1,9 @@
+#! /bin/sh
+
+# This script should be run in a virtual environment that contains this
+# distribution.
+
+# This will also require access to a redis machine that is defined in 
+# the config.ini file.
+
+celery -A celery_conf worker --loglevel=info -c 2
