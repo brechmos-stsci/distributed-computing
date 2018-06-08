@@ -10,7 +10,7 @@ These are notes on how to get Celery running on a computer or multiple computers
 
 http://www.celeryproject.org
 
-Essentially there are three parts to the Dask system:  
+Essentially there are three parts to the Celery system:  
   * Submitter - this computer/program one submits the jobs
   * Scheduler - a process that runs on a computer that acts as a broker between the submitter and the workers
   * Worker(s) - process(es) that do the actual work received from the scheduler.
