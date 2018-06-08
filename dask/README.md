@@ -1,5 +1,9 @@
 # Introduction
 
+Dask has a focus on advanced parallelism for analytics (they talk about numpy, Pandas, Scikit-Learn on their website). 
+
+> Dask is a flexible parallel computing library for analytic computing.
+
 These are notes on how to get Dask running on a computer or multiple computers.
 
 https://distributed.readthedocs.io/en/latest/quickstart.html
