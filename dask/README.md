@@ -4,11 +4,13 @@ Dask has a focus on advanced parallelism for analytics (they talk about numpy, P
 
 > Dask is a flexible parallel computing library for analytic computing.
 
-These are notes on how to get Dask running on a computer or multiple computers.
+dask.distributed  is a lightweight library for distributed computing in Python
+
+These are notes on how to get Dask.distributed running on a computer or multiple computers.
 
 https://distributed.readthedocs.io/en/latest/quickstart.html
 
-Essentially there are three parts to the Dask system:  
+Essentially there are three parts to the Dask.distributed system:  
   * Submitter - this computer/program one submits the jobs
   * Scheduler - a process that runs on a computer that acts as a broker between the submitter and the workers
   * Worker(s) - process(es) that do the actual work received from the scheduler.
