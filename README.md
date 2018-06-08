@@ -2,19 +2,22 @@
 
 A number of Python-related libraries exist for the programming of solutions either employing multiple CPUs or multicore CPUs in a symmetric multiprocessing (SMP) or shared memory environment, or potentially huge numbers of computers in a cluster or grid environment. 
 
-There are many levels to "distributed processing":
-  * Single core (not cluster / distributed)
-  * Multi-core / Multi-CPU
+There are many levels to parallel processing:
+  * Single Machine          
+      * threading in Python
+        * uses threads 
+        * threads run in the same memory space
       * multiprocessing Python Package
+        * uses processes
+        * processes have separate memory
         * Create Queue and Process
         * Add a Process (method and arguments) to the queue
         * Start running and block until all completed
         * -- or --
         * Create a process Pool()
         * Use the Pool() map functionality (map / reduce)
-          
-      * threading in Python
    * GPU
+     * CPU has multiple cores, GPU have thousands of cores
      * pyCUDA 
    * Cluster Computing / Distributed Processing
      * Unlike SMP architectures and especially in contrast to thread-based concurrency, cluster (and grid) architectures offer high scalability due to the relative absence of shared resources
@@ -59,3 +62,5 @@ The IPython architecture consists of four components:
 * IPython client
 
 Many, many others out there https://wiki.python.org/moin/ParallelProcessing
+
+Also, Dask and ipyparallel have some connectability with Juptyer notebooks.
