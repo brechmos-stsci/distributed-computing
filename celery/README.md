@@ -21,6 +21,9 @@ Essentially there are three parts to the Celery system:
   * Scheduler - a process that runs on a computer that acts as a broker between the submitter and the workers
   * Worker(s) - process(es) that do the actual work received from the scheduler.
 
+[](https://vinta-cms.s3.amazonaws.com/media/filer_public/a4/fb/a4fbadbe-6846-4a25-863e-a040accdd69c/results_backend.jpg)
+
+
 # Setup
 
 The following need to be installed
