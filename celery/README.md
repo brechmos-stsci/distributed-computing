@@ -108,3 +108,33 @@ The only caveat is they will need access to the redis queue defined in the confi
 
 Note the `celery_conf` part of the command, this refers back to the `celery_conf.py` file in part 2 (App).  This is how the workers figure out how to listen.
 
+## Task Queues
+
+http://docs.celeryproject.org/en/latest/userguide/routing.html#how-the-queues-are-defined
+
+One can also have multiple queues, depending on the type of work that needs to be done and the priorities.
+
+```
+CELERY_QUEUES = (
+    Queue('high', Exchange('high'), routing_key='high'),
+    Queue('normal', Exchange('normal'), routing_key='normal'),
+    Queue('low', Exchange('low'), routing_key='low'),
+)
+CELERY_DEFAULT_QUEUE = 'normal'
+CELERY_DEFAULT_EXCHANGE = 'normal'
+CELERY_DEFAULT_ROUTING_KEY = 'normal'
+CELERY_ROUTES = {
+    # -- HIGH PRIORITY QUEUE -- #
+    'myapp.tasks.check_payment_status': {'queue': 'high'},
+    # -- LOW PRIORITY QUEUE -- #
+    'myapp.tasks.close_session': {'queue': 'low'},
+}
+```
+
+Then start the workers:
+```
+celery worker -E -l INFO -n worker.high -Q high
+celery worker -E -l INFO -n worker.normal -Q normal
+celery worker -E -l INFO -n worker.low -Q low
+```
+They would most likely be on different machines.
