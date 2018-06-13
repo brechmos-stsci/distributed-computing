@@ -114,6 +114,8 @@ Note the `celery_conf` part of the command, this refers back to the `celery_conf
 
 http://docs.celeryproject.org/en/latest/userguide/routing.html#how-the-queues-are-defined
 
+** Can not use redis for this one, must use AMPQ **
+
 One can also have multiple queues, depending on the type of work that needs to be done and the priorities.
 
 ```
